@@ -1,4 +1,4 @@
-export const fader = [
+const fader1 = [
     {
      "id": "Au-001",
      "name": "Grampa tapizado",
@@ -8,30 +8,13 @@ export const fader = [
      "Column6": 2.8004591701487644,
      "Precio ajustado": 4.8377599898128745,
      "Column8": 3.2362106170239127,
-     "lista": 3.3980211478751086,
+     "lista": 'fader',
      "Column10": 3.6698628397051176,
      "Column11": 3.8900546100874247,
      "Column12": 4.66806553210491,
      "Column13": 4.994830119352254,
      "precio": 9.63,
      "precioPublico": 28.89
-    },
-    {
-     "id": "Au-0012|D",
-     "name": "Grampa tapizado Dodge 1,8",
-     "MARCA|MODELO": "Dodge 1500 Fam",
-     "Column4": 1.568,
-     "Column5": 1.6777600000000001,
-     "Column6": 1.8119808000000002,
-     "Precio ajustado": 3.1301753333841558,
-     "Column8": 2.0939250124800006,
-     "lista": "fader",
-     "Column10": 2.374510964152321,
-     "Column11": 2.5169816220014605,
-     "Column12": 3.0203779464017524,
-     "Column13": 3.231804402649875,
-     "precio": 9.920614813918966,
-     "precioPublico": 29.76
     },
     {
      "id": "Au-0012|D",
@@ -1823,7 +1806,8 @@ export const fader = [
      "name": "Chapa soporte paragolpe ( sola )",
      "MARCA|MODELO": "Renault R 12",
      "precio": 114.18218240000002,
-     "precioPublico": 342.55
+     "precioPublico": 342.55,
+     "lista" : "fader"
     },
     {
      "id": "Au-424",
@@ -3386,8 +3370,8 @@ export const fader = [
      "Column11": 25.723656000000005,
      "Column12": 30.868387200000004,
      "Column13": 33.02917430400001,
-     "precio": "#VALUE!",
-     "precioPublico": "#VALUE!"
+     "precio": 0,
+     "precioPublico": 0
     },
     {
      "id": "Au-1021|T",
@@ -6246,6 +6230,16 @@ export const fader = [
      "precio": 21.5,
      "precioPublico": 64.5
     }
-   ]
-   
-  
+]
+
+const fader = fader1.map(e =>{
+    return{
+        id:e.id,
+        name: e.name,
+        precio: e.precio,
+        precioPublico: e.precioPublico,
+        lista: e.lista
+    }
+})
+
+export default fader

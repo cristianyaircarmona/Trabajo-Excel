@@ -1,4 +1,4 @@
-export const sg = [
+const sg = [
     {
      "id": "01-150010-14",
      "name": "BIS CAPOT BEDFORD IZQ.",
@@ -36990,3 +36990,9 @@ export const sg = [
      "precioPublico": 855.44
     }
    ]
+
+
+sg.forEach(e=>e.lista = 'sg')
+
+export default sg
+

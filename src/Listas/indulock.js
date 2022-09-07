@@ -11,7 +11,8 @@ export const indulock = [
      "name": "TAUNUS 78\/84  ",
      "lista": 2619.88815816073,
      "lista": "indulock",
-     "precioPublico": 4218.02
+     "precioPublico": 4218.02,
+     "precio": 0
     },
     {
      "id": "2-457",
@@ -563,7 +564,8 @@ export const indulock = [
      "id": "3-1200",
      "name": "CERRADURAS PTAS RANGER COMPLETO  (NOTA:PRECIO NETO. NO ACEPTA DESCUENTO)",
      "precio": 0,
-     "precioPublico": 0
+     "precioPublico": 0,
+     "lista" : "indulock"
     },
     {
      "id": "DP-557",
@@ -1394,7 +1396,8 @@ export const indulock = [
      "id": "CI-498",
      "name": "GOL POWER - COUNTRY - VOYAGE - NEW BEETLE - GOL TREND",
      "precio": 0,
-     "precioPublico": 0
+     "precioPublico": 0,
+     "lista" : "indulock"
     },
     {
      "id": "22.620",
@@ -3184,13 +3187,15 @@ export const indulock = [
      "id": "4-664",
      "name": "CERRADURA BAUL R 19 MECANICO-ELECTRICO",
      "precio": 0,
-     "precioPublico": 0
+     "precioPublico": 0,
+     "lista" : "indulock"
     },
     {
      "id": "4-665",
      "name": "CERRADURA BAUL CLIO ",
      "precio": 0,
-     "precioPublico": 0
+     "precioPublico": 0,
+     "lista" : "indulock"
     },
     {
      "id": "DP-626",
@@ -3956,7 +3961,8 @@ export const indulock = [
      "id": "4-663",
      "name": "PEUGEOT 205",
      "precio": 0,
-     "precioPublico": 0
+     "precioPublico": 0,
+     "lista" : "indulock"
     },
     {
      "id": "DP-629",
@@ -4408,7 +4414,9 @@ export const indulock = [
     {
      "id": "CI-494",
      "name": "CERRADURA IGNICION TOYOTA HILUX ( MODELO ARGENTINO)",
-     "precioPublico": 0
+     "precioPublico": 0,
+     "precio" : 0,
+     "lista" : "indulock"
     },
     {
      "id": "DP-674",
@@ -4427,7 +4435,9 @@ export const indulock = [
     {
      "id": "DP-683",
      "name": "JGO IGNICION Y 2 PTAS TOYOTA HILUX",
-     "precioPublico": 0
+     "precioPublico": 0,
+     "precio" : 0,
+     "lista" : 'indulock'
     },
     {
      "id": 83189,
@@ -4558,7 +4568,9 @@ export const indulock = [
     {
      "id": "DP-700",
      "name": "PAR PTAS DELANTERAS BERLINGO",
-     "precioPublico": 0
+     "precioPublico": 0,
+     "precio" : 0,
+     "lista" : "indulock"
     },
     {
      "id": "DSE-677",

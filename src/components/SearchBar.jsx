@@ -9,7 +9,10 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
-import JSON from '../Listas/JSON.JS';
+import data from '../Listas/allData.js';
+import { FormControl,InputLabel, MenuItem, Select } from '@mui/material';
+import { useFiltros } from '../hooks/useFiltros.jsx';
+
 
 
 
@@ -55,7 +58,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function SearchAppBar() {
-    const listas = JSON
+    const { filtrar } = useFiltros();
+    const [restablecer,setRestablecer] = useState('');
+    const listas = data
     const [lista , setLista] = useState("")
 
     const buscar = (e) =>{
@@ -75,6 +80,50 @@ export default function SearchAppBar() {
           >
             CERRAJERIA LA CUSPIDE
           </Typography>
+          <FormControl sx={{ m: .3, minWidth: 95}} size="small">
+          <InputLabel sx={{color:'inherit'}} id="ordenamiento-small">Marcas</InputLabel>
+            <Select
+              sx={{color:'inherit'}}
+              labelId="ordenamiento-small"
+              id="ordenamiento-small"
+              label="Marcas"
+              onChange={e=>{
+                filtrar(e.target.value)
+                setRestablecer("")
+              }}
+            >
+              <MenuItem value=''>
+                <em>Restablecer</em>
+              </MenuItem>
+              <MenuItem value='AA'>AA</MenuItem>
+              <MenuItem value="divalo">Divalo</MenuItem>
+              <MenuItem value="fader">Fader</MenuItem>
+              <MenuItem value="indulock">Indulock</MenuItem>
+              <MenuItem value="sg">Sg</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl sx={{ m: .3, minWidth: 132}} size="small">
+          <InputLabel sx={{color:'inherit'}} id="ordenamiento">Ordenar por:</InputLabel>
+            <Select
+              sx={{color:'inherit'}}
+              labelId="ordenamiento"
+              value={restablecer}
+              id="ordenamiento"
+              label="Ordenar por:"
+              onChange={e=>{
+                filtrar(e.target.value)
+                setRestablecer(e.target.value)
+              }}
+            >
+              <MenuItem value="">
+                <em>Restablecer</em>
+              </MenuItem>
+              <MenuItem value="az">orden alfabetico(a-z)</MenuItem>
+              <MenuItem value="za">orden alfabetico(z-a)</MenuItem>
+              <MenuItem value="min">Precio de menor a mayor</MenuItem>
+              <MenuItem value="max">Precio de mayor a menor</MenuItem>
+            </Select>
+          </FormControl>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
