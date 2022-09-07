@@ -11,6 +11,10 @@ import { fader } from '../../Listas/fader';
 import Title from '../Title';
 import ButtonStock from '../ButtonStock';
 import CantidadStock from '../CantidadStock';
+import SearchAppBar from '../SearchBar';
+
+
+
 export const Home = () => {
     const [Divalo, setDivalo] = useState(divalo);
 
@@ -53,7 +57,7 @@ export const Home = () => {
     console.log(AA)
   return (
     <div>
-        <Title></Title>
+        <SearchAppBar></SearchAppBar>
                 <Grid container>
                     <Grid item xs={12} sx={{ height:650, width: '100%' }}>
                         <DataGrid
