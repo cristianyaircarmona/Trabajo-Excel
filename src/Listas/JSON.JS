@@ -14,8 +14,10 @@ fader.map(e =>{
     }
 })
 
-export const JSON = [...divalo, ...AA , ...indulock,...fader1,...sg]
+const JSON = [...divalo, ...AA , ...indulock,...fader1,...sg]
 
 JSON.forEach((i)=>{
     i.stock=0
 })
+
+export default JSON

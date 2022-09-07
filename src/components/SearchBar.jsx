@@ -8,8 +8,10 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import { JSON } from '../Listas/JSON.JS';
 import { useState } from 'react';
+import JSON from '../Listas/JSON.JS';
+
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -61,7 +63,6 @@ export default function SearchAppBar() {
         setLista(e.target.value)
     }
      
-    console.log(buscar())
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
