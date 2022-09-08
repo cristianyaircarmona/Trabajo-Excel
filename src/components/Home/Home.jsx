@@ -16,16 +16,17 @@ export const Home = () => {
         {field: 'lista',headerName: 'Lista',width: 200,sortable: true,},
         { field: 'precio', headerName: 'Precio', width: 300 },
         {field: 'precioPublico',headerName: 'Precio Publico',width: 200,sortable: true,},
-        {headerName: "Cantidad", field:"x" , renderCell: () => {
-            return( <CantidadStock/> )
+        {headerName: "Cantidad", field:"x" , renderCell: (rows) => {
+            return( <CantidadStock id={rows.id} /> )
         }},
-        {headerName: "Stock", renderCell: ()=>{
+        {headerName: "Stock", renderCell: (rows)=>{
             return(
-                    <ButtonStock/>            
+                    <ButtonStock  id={rows.id} />            
            )
         }},
         
     ];
+    console.log(allJson);
   return (
     <div>
         <SearchAppBar></SearchAppBar>

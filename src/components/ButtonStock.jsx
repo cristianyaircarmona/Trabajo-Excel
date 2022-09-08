@@ -1,9 +1,13 @@
 import { Button , Typography} from '@mui/material';
 import React from 'react'
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
-function ButtonStock() {
-    const [button, setButton] = useState(true)
+
+function ButtonStock({id}) {
+    const [button, setButton] = useState(true);
+    const allJson = useSelector(state=>state.allJson);
+    const producto = allJson.filter(i=>i.id === id);
     const cambioColor = () =>{  
         setButton(!button)}
 
@@ -11,7 +15,7 @@ function ButtonStock() {
         <Typography
                     onClick={(e) => cambioColor(e) }
                 >
-                {button ? <Button variant="contained" color='primary'> STOCK </Button> : <Button variant="contained" color="secondary" > STOCK </Button> }
+                {producto[0].stock > 0 ? <Button variant="contained" color='primary'> STOCK </Button> : <Button variant="contained" color="error" > STOCK </Button> }
                 </Typography>
   )
 }

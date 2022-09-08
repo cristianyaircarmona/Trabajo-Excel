@@ -1,6 +1,6 @@
 import { AA } from "../../Listas/AA";
 import data from "../../Listas/allData";
-import { FILTRADO } from "../actions/actions";
+import { FILTRADO, UPDATESTOCK } from "../actions/actions";
 
 
 
@@ -78,6 +78,17 @@ const rootReducer = (state = initialState,action)=>{
                         ...state,
                         allJson : data
                     }
+            }
+        case UPDATESTOCK:
+            let copia = [...state.allJson];
+            copia.forEach(i=>{
+                if(i.id === action.payload.id){
+                    i.stock = action.payload.value
+                }
+            })
+            return {
+                ...state,
+                allJson: copia
             }
         default:
             return state
